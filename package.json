@@ -1,6 +1,6 @@
 {
   "name": "mmle-namespace",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Make My Life Easier - namespace",
   "main": "index.js",
   "scripts": {
