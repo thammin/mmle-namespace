@@ -5,14 +5,6 @@ describe('Some boring tests.', function() {
 
   var cats = {};
 
-  it('should throw error if target is not Object', function() {
-    try {
-      namespace('cats', 'yellow.small.happy', 'paul');
-    } catch(e) {
-      assert(e.message.includes('Invalid object'));
-    }
-  });
-
   it('should throw error if path is not String', function() {
     try {
       namespace(cats, 1, 'paul');

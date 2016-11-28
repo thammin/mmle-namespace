@@ -6,16 +6,13 @@
    * Make my life easier
    * get/set any namespace from object
    *
-   * @param {Object} obj The object to manipulate with.
+   * @param {*} obj The object to manipulate with.
    * @param {String} path The path of the property to get/set.
    * @param {*} [val=undefined] The value to set.
    * @param {Boolean} [allowOverwrite] Specify allowing overwrite when value is already existed.
    * @returns {*} returns value if we got any value.
    */
   var namespace = function(obj, path, val, allowOverwrite) {
-    if (typeof obj !== 'object') {
-      throw new Error('Invalid object: ' + obj + '.');
-    }
     if (typeof path !== 'string' || path.length === 0) {
       throw new Error('Invalid namespace: ' + path + '.');
     }
