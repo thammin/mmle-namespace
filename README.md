@@ -2,32 +2,59 @@
 
 > Make My Life Easier when manipulate with namespace
 
+# Usage
+
+#### Node
+
+```shell
+npm install mmle-namespace --save-dev
+```
+
+#### Browser
+
+```
+└── dist
+    └── mmle-namespace.js
+```
+
 # API
 
-```js
-var namespace = require('mmle-namespace');
+#### `namespace(obj, path, value, [allowOverwrite])`
 
+Setter.
+
+```js
 var cats = {};
 
-// setter
 var name = namespace(cats, 'yellow.small.happy', 'paul');
-// cats => { 'yellow': { 'small': { 'happy': 'paul' } } }
-// name => 'paul'
+console.log(cats); // { 'yellow': { 'small': { 'happy': 'paul' } } }
+console.log(name); // 'paul'
 
 
-// setter with exisiting value
+// when the namespace is already existed
 var name = namespace(cats, 'yellow.small.happy', 'thammin');
 // throw error
 
 
-// overwrite setter with exisiting value
+// overwrite the existing namespace
 var name = namespace(cats, 'yellow.small.happy', 'thammin', true);
-// cats => { 'yellow': { 'small': { 'happy': 'thammin' } } }
-// name => 'thammin'
+console.log(cats); // { 'yellow': { 'small': { 'happy': 'thammin' } } }
+console.log(name); // 'thammin'
+```
 
+#### `namespace(obj, path)`
 
-// getter 
+Getter.
+
+```js
+var cats = {
+  yellow: {
+    small: {
+      happy: 'thammin'
+    }
+  }
+};
+
 var name = namespace(cats, 'yellow.small.happy');
-// name => 'thammin'
-
+console.log(name); // 'thammin'
 ```

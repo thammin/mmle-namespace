@@ -4,7 +4,8 @@
   "description": "Make My Life Easier - namespace",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require intelli-espower-loader"
+    "test": "npm run build && mocha --require intelli-espower-loader",
+    "build": "cat index.js > dist/mmle-namespace.js"
   },
   "keywords": [
     "thammin",

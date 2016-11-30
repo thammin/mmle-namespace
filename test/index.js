@@ -1,5 +1,5 @@
 var assert = require('power-assert');
-var namespace = require('..');
+var namespace = require('../dist/mmle-namespace.js');
 
 describe('Some boring tests.', function() {
 
