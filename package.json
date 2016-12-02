@@ -3,6 +3,10 @@
   "version": "2.1.0",
   "description": "Make My Life Easier - namespace",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thammin/mmle-namespace.git"
+  },
   "scripts": {
     "test": "npm run build && mocha --require intelli-espower-loader",
     "build": "cat index.js > dist/mmle-namespace.js"
