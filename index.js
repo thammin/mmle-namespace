@@ -1,3 +1,9 @@
+/**
+ * @license
+ * mmle-namespace
+ * Copyright (c) 2016 Paul Young
+ * Released under MIT license.
+ */
 (function() {
   'use strict';
   var root = this;
